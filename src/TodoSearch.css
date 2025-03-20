@@ -1,0 +1,35 @@
+.TodoSearch {
+    background: linear-gradient(135deg, #ffffff, #f5f7fa); /* Fondo con degradado elegante */
+    border-radius: 8px; /* Bordes más redondeados para un look moderno */
+    border: 2px solid #dfe3e8; /* Borde más sutil */
+    margin: 12px auto; /* Centra el elemento si es posible */
+    height: 56px; /* Altura ajustada para mejorar la proporción */
+    width: calc(100% - 48px); /* Espaciado ajustado para mayor coherencia */
+    font-size: 18px; /* Tamaño más legible */
+    text-align: left; /* Texto alineado a la izquierda para mejor usabilidad */
+    padding: 0 16px; /* Espaciado interno para el texto */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #2c3e50; /* Color más suave y profesional para el texto */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra más ligera */
+    transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Suavidad en la interactividad */
+}
+
+.TodoSearch:hover {
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15); /* Sombra más pronunciada en hover */
+    border-color: #61DAFA; /* Cambia el borde en hover */
+}
+
+.TodoSearch::placeholder {
+    color: #b0b6bd; /* Color más claro para el placeholder */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300; /* Más delgado para distinguir el texto del placeholder */
+    font-size: 16px; /* Tamaño ajustado para placeholder */
+}
+
+.TodoSearch:focus {
+    outline: none; /* Elimina la línea de borde predeterminada */
+    border-color: #61DAFA; /* Borde azul claro al enfocar */
+    box-shadow: 0px 6px 16px rgba(97, 218, 250, 0.3); /* Efecto de enfoque con sombra azul */
+    background: #ffffff; /* Fondo ligeramente brillante al enfocar */
+}

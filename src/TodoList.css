@@ -1,0 +1,32 @@
+.TodoLis {
+    margin: 0 auto; /* Centra la lista horizontalmente */
+    padding: 0 0 40px 0; /* Ajuste del espaciado inferior */
+    list-style: none; /* Eliminamos los marcadores de lista */
+    max-width: 800px; /* Limita el ancho para mejorar la lectura */
+    background-color: #f7f9fb; /* Fondo suave para la lista */
+    border-radius: 10px; /* Bordes redondeados para un diseño moderno */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+    overflow: hidden; /* Evita que el contenido sobresalga */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Suavidad en interactividad */
+}
+
+.TodoLis:hover {
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+    transform: scale(1.02); /* Efecto de ampliación al pasar el cursor */
+}
+
+.TodoLis li {
+    padding: 16px; /* Espaciado interno en los elementos */
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre elementos */
+    font-size: 18px; /* Tamaño de fuente legible */
+    color: #2c3e50; /* Tono oscuro para el texto */
+    transition: background-color 0.3s ease; /* Suavidad al interactuar */
+}
+
+.TodoLis li:last-child {
+    border-bottom: none; /* Quita la línea divisoria del último elemento */
+}
+
+.TodoLis li:hover {
+    background-color: #e3e9f0; /* Cambio de color en hover */
+}

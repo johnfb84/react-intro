@@ -1,0 +1,105 @@
+.TodoItem {
+  background-color: #ffffff; /* Fondo limpio */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 8px; /* Bordes suaves */
+  border: 2px solid #e3e9f0; /* Borde inicial neutro */
+  box-shadow: 0px 4px 20px rgba(32, 35, 41, 0.1); /* Sombra base */
+  transition: all 0.3s ease; /* Suavidad en todos los cambios */
+}
+
+.TodoItem--active {
+  background-color: #e8f5fe; /* Fondo azul claro para tareas activas */
+  border: 3px solid #3498db; /* Borde azul vibrante */
+  box-shadow: 0px 6px 16px rgba(52, 152, 219, 0.3); /* Sombra azul más pronunciada */
+  transform: scale(1.02); /* Aumento leve para destacar */
+}
+
+.TodoItem--complete {
+  background-color: #eafaf1; /* Fondo verde suave */
+  border: 3px solid #2ecc71; /* Borde verde brillante */
+  box-shadow: 0px 6px 20px rgba(46, 204, 113, 0.4); /* Sombra verde llamativa */
+  transform: scale(1.05); /* Aumento visual más marcado */
+}
+
+.TodoItem:hover {
+  transform: scale(1.06); /* Aumento adicional en hover */
+  box-shadow: 0px 8px 25px rgba(32, 35, 41, 0.2); /* Sombra más prominente */
+}
+
+.TodoItem-p {
+  margin: 16px 0 16px 24px;
+  width: calc(100% - 120px);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #2c3e50; /* Color neutral */
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.TodoItem-p--active {
+  color: #3498db; /* Azul vibrante */
+  font-weight: bold; /* Resaltado adicional */
+  text-decoration: underline; /* Decoración llamativa */
+}
+
+.TodoItem-p--complete {
+  color: #2ecc71; /* Verde brillante */
+  text-decoration: line-through; /* Tarea finalizada */
+  font-style: italic; /* Diferenciación en estilo */
+}
+
+.Icon {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  width: 48px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #f7f9fb;
+  border-radius: 50%; /* Forma circular */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+}
+
+.Icon:hover {
+  background-color: #e3e9f0;
+  transform: scale(1.1); /* Zoom en hover */
+}
+
+.Icon-check--active {
+  color: #3498db; /* Azul vibrante para tareas activas */
+}
+
+.Icon-check--complete {
+  color: #2ecc71; /* Verde llamativo para tareas completadas */
+  animation: pulse 0.8s infinite; /* Animación para destacar ícono completado */
+}
+
+.Icon-delete {
+  position: absolute;
+  top: -12px;
+  right: 12px;
+  color: #e74c3c;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.Icon-delete:hover {
+  color: #c0392b; /* Rojo más oscuro */
+  transform: rotate(15deg); /* Giro llamativo */
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2); /* Efecto de pulso en ícono completado */
+  }
+}

@@ -1,0 +1,41 @@
+.CreateTodoButton {
+  background: linear-gradient(135deg, #007BFF, #0056D2); /* Gradiente azul profesional */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2), inset 0px 0px 5px rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 20px; /* Bordes suaves y modernos */
+  cursor: pointer;
+  font-size: 20px; /* Tamaño equilibrado para aplicaciones */
+  color: #FFFFFF;
+  padding: 16px 32px; /* Espaciado interno cómodo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, filter 0.2s ease-in-out;
+  animation: pulse 2s infinite; /* Animación "respiración" */
+}
+
+.CreateTodoButton:hover {
+  background: linear-gradient(135deg, #0056D2, #0039A6); /* Azul más intenso al pasar el ratón */
+  transform: scale(1.08) rotate(5deg); /* Escala y rotación para dinamismo */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3), inset 0px 0px 8px rgba(255, 255, 255, 0.3);
+}
+
+.CreateTodoButton:active {
+  transform: scale(0.96);
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2), inset 0px 0px 10px rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, #0039A6, #002366); /* Colores oscuros para efecto de clic */
+}
+
+/* Animación de "pulso" */
+@keyframes pulse {
+  0%, 100% {
+      filter: brightness(1);
+  }
+  50% {
+      filter: brightness(1.2);
+  }
+}
