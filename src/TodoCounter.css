@@ -1,28 +1,32 @@
 .TodoCounter {
-    font-size: 26px; /* Ajuste del tamaño de fuente para mayor impacto */
+    font-size: 26px;
     text-align: center;
-    margin: 0 auto; /* Centra automáticamente el elemento */
-    padding: 40px; /* Ajuste del relleno para un diseño más compacto */
-    background-color: #f4f4f9; /* Fondo claro y limpio */
-    color: #2c3e50; /* Color de texto elegante */
-    border-radius: 10px; /* Bordes redondeados para un diseño moderno */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para resaltar */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+    margin: 20px auto;
+    padding: 40px;
+    background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+    /* Fondo suave */
+    color: #2c3e50;
+    border-radius: 12px;
+    /* Bordes iguales a TodoItem */
+    border: 2px solid #e3e9f0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    /* Sombra consistente */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .TodoCounter:hover {
-    transform: scale(1.05); /* Efecto de zoom al pasar el cursor */
-    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .TodoCounter span {
     font-weight: bold;
-    color: #3498db; /* Resalta el texto con un color vibrante */
-    font-size: 28px; /* Tamaño de fuente ligeramente mayor */
-    text-decoration: underline; /* Destaca aún más el texto */
-    transition: color 0.3s ease; /* Animación de color */
+    color: #42a5f5;
+    font-size: 28px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
 }
 
 .TodoCounter span:hover {
-    color: #1abc9c; /* Cambio de color al pasar el cursor */
+    color: #66bb6a;
 }

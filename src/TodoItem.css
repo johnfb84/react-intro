@@ -1,56 +1,53 @@
 .TodoItem {
-  background-color: #ffffff; /* Fondo limpio */
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9); /* Fondo suave */
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-top: 24px;
-  padding: 16px;
-  border-radius: 8px; /* Bordes suaves */
-  border: 2px solid #e3e9f0; /* Borde inicial neutro */
-  box-shadow: 0px 4px 20px rgba(32, 35, 41, 0.1); /* Sombra base */
-  transition: all 0.3s ease; /* Suavidad en todos los cambios */
+  padding: 16px 24px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0; /* Borde gris claro */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra consistente */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .TodoItem--active {
-  background-color: #e8f5fe; /* Fondo azul claro para tareas activas */
-  border: 3px solid #3498db; /* Borde azul vibrante */
-  box-shadow: 0px 6px 16px rgba(52, 152, 219, 0.3); /* Sombra azul más pronunciada */
-  transform: scale(1.02); /* Aumento leve para destacar */
+  background: linear-gradient(to right, #e3f2fd, #ffffff); /* Fondo degradado azul */
+  border: 2px solid #1e88e5; /* Azul más oscuro */
+  box-shadow: 0px 6px 20px rgba(30, 136, 229, 0.4); /* Sombra azul intensa */
+  transform: scale(1.02);
 }
 
 .TodoItem--complete {
-  background-color: #eafaf1; /* Fondo verde suave */
-  border: 3px solid #2ecc71; /* Borde verde brillante */
-  box-shadow: 0px 6px 20px rgba(46, 204, 113, 0.4); /* Sombra verde llamativa */
-  transform: scale(1.05); /* Aumento visual más marcado */
+  background: linear-gradient(to right, #e8f5e9, #ffffff); /* Fondo degradado verde */
+  border: 2px solid #43a047; /* Verde más oscuro */
+  box-shadow: 0px 6px 20px rgba(67, 160, 71, 0.4); /* Sombra verde llamativa */
+  transform: scale(1.03);
 }
 
 .TodoItem:hover {
-  transform: scale(1.06); /* Aumento adicional en hover */
-  box-shadow: 0px 8px 25px rgba(32, 35, 41, 0.2); /* Sombra más prominente */
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); /* Sombra destacada */
+  transform: translateY(-4px);
 }
 
 .TodoItem-p {
-  margin: 16px 0 16px 24px;
-  width: calc(100% - 120px);
   font-size: 18px;
-  line-height: 28px;
   font-weight: 400;
-  color: #2c3e50; /* Color neutral */
+  color: #2c3e50; /* Texto neutro */
+  margin-right: auto;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .TodoItem-p--active {
-  color: #3498db; /* Azul vibrante */
-  font-weight: bold; /* Resaltado adicional */
-  text-decoration: underline; /* Decoración llamativa */
+  color: #1e88e5; /* Azul más oscuro */
+  font-weight: bold;
 }
 
 .TodoItem-p--complete {
-  color: #2ecc71; /* Verde brillante */
-  text-decoration: line-through; /* Tarea finalizada */
-  font-style: italic; /* Diferenciación en estilo */
+  color: #43a047; /* Verde más oscuro */
+  text-decoration: line-through;
+  font-style: italic;
 }
 
 .Icon {
@@ -58,48 +55,55 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 48px;
-  width: 48px;
-  font-size: 24px;
-  font-weight: bold;
-  background-color: #f7f9fb;
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  background-color: #ffffff; /* Blanco para mayor contraste */
   border-radius: 50%; /* Forma circular */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1); /* Sombra inicial */
+  border: 2px solid #d0d0d0; /* Borde gris claro */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
 }
 
 .Icon:hover {
-  background-color: #e3e9f0;
-  transform: scale(1.1); /* Zoom en hover */
+  background-color: #1e88e5; /* Azul vibrante */
+  color: #ffffff; /* Texto blanco para contraste */
+  transform: scale(1.15);
+  box-shadow: 0px 4px 12px rgba(30, 136, 229, 0.4); /* Sombra azul más fuerte */
 }
 
 .Icon-check--active {
-  color: #3498db; /* Azul vibrante para tareas activas */
+  background-color: #1e88e5; /* Azul oscuro */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #1565c0; /* Azul más profundo */
 }
 
 .Icon-check--complete {
-  color: #2ecc71; /* Verde llamativo para tareas completadas */
-  animation: pulse 0.8s infinite; /* Animación para destacar ícono completado */
+  background-color: #43a047; /* Verde oscuro */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #2e7d32; /* Verde aún más profundo */
+  animation: glow 1s infinite ease-in-out; /* Efecto de resplandor */
 }
 
 .Icon-delete {
-  position: absolute;
-  top: -12px;
-  right: 12px;
-  color: #e74c3c;
-  transition: transform 0.2s ease, color 0.3s ease;
+  background-color: #e53935; /* Rojo oscuro */
+  color: #ffffff; /* Texto blanco */
+  border: 2px solid #b71c1c; /* Rojo profundo */
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .Icon-delete:hover {
-  color: #c0392b; /* Rojo más oscuro */
-  transform: rotate(15deg); /* Giro llamativo */
+  background-color: #b71c1c; /* Rojo más fuerte */
+  box-shadow: 0px 4px 12px rgba(183, 28, 28, 0.4);
+  transform: scale(1.2); /* Zoom más claro */
 }
 
-@keyframes pulse {
+/* Efecto de resplandor */
+@keyframes glow {
   0%, 100% {
-    transform: scale(1);
+    box-shadow: 0 0 8px rgba(67, 160, 71, 0.8);
   }
   50% {
-    transform: scale(1.2); /* Efecto de pulso en ícono completado */
+    box-shadow: 0 0 16px rgba(67, 160, 71, 1);
   }
 }
