@@ -1,0 +1,81 @@
+.Icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    font-size: 20px;
+    background-color: #ffffff;
+    /* Blanco para mayor contraste */
+    border-radius: 50%;
+    /* Forma circular */
+    border: 2px solid #d0d0d0;
+    /* Borde gris claro */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra inicial */
+}
+
+.Icon-container:hover {
+    background-color: #d0d0d0;
+    /* Azul vibrante */
+    color: #ffffff;
+    /* Texto blanco para contraste */
+    transform: scale(1.15);
+    box-shadow: 0px 4px 12px rgba(30, 136, 229, 0.4);
+    /* Sombra azul más fuerte */
+}
+
+.Icon-container-check--active {
+    background-color: #1e88e5;
+    /* Azul oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+    border: 2px solid #1565c0;
+    /* Azul más profundo */
+}
+
+.Icon-container-check--complete {
+    background-color: #43a047;
+    /* Verde oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+    border: 2px solid #2e7d32;
+    /* Verde aún más profundo */
+    animation: glow 1s infinite ease-in-out;
+    /* Efecto de resplandor */
+}
+
+.Icon-container-delete {
+    background-color: #d0d0d0;
+    /* Rojo oscuro */
+    color: #ffffff;
+    /* Texto blanco */
+    border: 2px solid grey;
+    /* Rojo profundo */
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Icon-container-delete:hover {
+    background-color: #b71c1c;
+    /* Rojo más fuerte */
+    box-shadow: 0px 4px 12px rgba(183, 28, 28, 0.4);
+    transform: scale(1.2);
+    /* Zoom más claro */
+}
+
+.Icon-svg {
+    width: 24px;
+    height: 24px;
+}
+
+.Icon-container-delete:hover .Icon-svg {
+
+    fill: red;
+}
+
+.Icon-container-check:hover .Icon-svg {
+
+    fill: green;
+}

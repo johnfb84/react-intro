@@ -1,5 +1,6 @@
 .TodoItem {
-  background: linear-gradient(to bottom, #ffffff, #f9f9f9); /* Fondo suave */
+  background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+  /* Fondo suave */
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -7,103 +8,72 @@
   padding: 16px 24px;
   margin: 20px 0;
   border-radius: 12px;
-  border: 2px solid #e0e0e0; /* Borde gris claro */
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Sombra consistente */
+  border: 2px solid #e0e0e0;
+  /* Borde gris claro */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  /* Sombra consistente */
   transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 
 .TodoItem--active {
-  background: linear-gradient(to right, #e3f2fd, #ffffff); /* Fondo degradado azul */
-  border: 2px solid #1e88e5; /* Azul más oscuro */
-  box-shadow: 0px 6px 20px rgba(30, 136, 229, 0.4); /* Sombra azul intensa */
+  background: linear-gradient(to right, #e3f2fd, #ffffff);
+  /* Fondo degradado azul */
+  border: 2px solid #1e88e5;
+  /* Azul más oscuro */
+  box-shadow: 0px 6px 20px rgba(30, 136, 229, 0.4);
+  /* Sombra azul intensa */
   transform: scale(1.02);
 }
 
 .TodoItem--complete {
-  background: linear-gradient(to right, #e8f5e9, #ffffff); /* Fondo degradado verde */
-  border: 2px solid #43a047; /* Verde más oscuro */
-  box-shadow: 0px 6px 20px rgba(67, 160, 71, 0.4); /* Sombra verde llamativa */
+  background: linear-gradient(to right, #e8f5e9, #ffffff);
+  /* Fondo degradado verde */
+  border: 2px solid #43a047;
+  /* Verde más oscuro */
+  box-shadow: 0px 6px 20px rgba(67, 160, 71, 0.4);
+  /* Sombra verde llamativa */
   transform: scale(1.03);
 }
 
 .TodoItem:hover {
-  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); /* Sombra destacada */
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+  /* Sombra destacada */
   transform: translateY(-4px);
 }
 
 .TodoItem-p {
   font-size: 18px;
   font-weight: 400;
-  color: #2c3e50; /* Texto neutro */
+  color: #2c3e50;
+  /* Texto neutro */
   margin-right: auto;
   transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .TodoItem-p--active {
-  color: #1e88e5; /* Azul más oscuro */
+  color: #1e88e5;
+  /* Azul más oscuro */
   font-weight: bold;
 }
 
 .TodoItem-p--complete {
-  color: #43a047; /* Verde más oscuro */
+  color: #43a047;
+  /* Verde más oscuro */
   text-decoration: line-through;
   font-style: italic;
 }
 
-.Icon {
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
-  font-size: 20px;
-  background-color: #ffffff; /* Blanco para mayor contraste */
-  border-radius: 50%; /* Forma circular */
-  border: 2px solid #d0d0d0; /* Borde gris claro */
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-}
-
-.Icon:hover {
-  background-color: #1e88e5; /* Azul vibrante */
-  color: #ffffff; /* Texto blanco para contraste */
-  transform: scale(1.15);
-  box-shadow: 0px 4px 12px rgba(30, 136, 229, 0.4); /* Sombra azul más fuerte */
-}
-
-.Icon-check--active {
-  background-color: #1e88e5; /* Azul oscuro */
-  color: #ffffff; /* Texto blanco */
-  border: 2px solid #1565c0; /* Azul más profundo */
-}
-
-.Icon-check--complete {
-  background-color: #43a047; /* Verde oscuro */
-  color: #ffffff; /* Texto blanco */
-  border: 2px solid #2e7d32; /* Verde aún más profundo */
-  animation: glow 1s infinite ease-in-out; /* Efecto de resplandor */
-}
-
-.Icon-delete {
-  background-color: #e53935; /* Rojo oscuro */
-  color: #ffffff; /* Texto blanco */
-  border: 2px solid #b71c1c; /* Rojo profundo */
-  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.Icon-delete:hover {
-  background-color: #b71c1c; /* Rojo más fuerte */
-  box-shadow: 0px 4px 12px rgba(183, 28, 28, 0.4);
-  transform: scale(1.2); /* Zoom más claro */
-}
 
 /* Efecto de resplandor */
 @keyframes glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 8px rgba(67, 160, 71, 0.8);
   }
+
   50% {
     box-shadow: 0 0 16px rgba(67, 160, 71, 1);
   }
 }
+
