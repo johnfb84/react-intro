@@ -13,6 +13,7 @@
   position: fixed;
   bottom: 24px;
   right: 24px;
+  z-index: 1;
 
   transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease, filter 0.2s ease-in-out;
   animation: pulse 2s infinite; /* Animación "respiración" */
